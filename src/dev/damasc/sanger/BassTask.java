@@ -1,16 +1,17 @@
 package dev.damasc.sanger;
+
 import java.util.List;
 
 import javax.sound.sampled.LineUnavailableException;
 
 public class BassTask implements Runnable, Player {
-	
+
 	private List<Double> notes;
-	
+
 	public BassTask(List<Double> notes) {
 		this.notes = notes;
 	}
-	
+
 	@Override
 	public void run() {
 		try {
@@ -108,13 +109,13 @@ public class BassTask implements Runnable, Player {
 			Beep(notes.get(Note.F3.getIdx()), "quarter");
 			Beep(notes.get(Note.G3.getIdx()), "quarter");
 			Beep(notes.get(Note.C3.getIdx()), "whole");
-			
+
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
