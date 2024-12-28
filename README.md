@@ -18,5 +18,5 @@ javac dev/damasc/sanger/*.java
 For now, it's just a simple melody player configured to play _"Ah vous dirai-je, Maman"_. To use it, run the following command:
 
 ```
-java dev/damasc/sanger/Main.class
+java dev.damasc.sanger.Main
 ```
